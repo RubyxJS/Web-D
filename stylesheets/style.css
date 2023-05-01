@@ -1,7 +1,8 @@
 body {
   background-color: #093f46;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height:100vw;
 }
 
 .header {
@@ -78,15 +79,18 @@ img {
 }
 
 .content {
-  font-size: 200%;
+  font-size: 110%;
   margin-top: 2%;
   margin-bottom: 1%;
   background-color: #00abc19f;
   border: solid #00aac1;
   padding-left: 2%;
   padding-bottom: 1%;
-  width: 50%;
+  width: 100%;
   height: auto;
+}
+#home-content {
+  margin-bottom: 6%;
 }
 
 .form {
@@ -113,17 +117,129 @@ img {
 textarea {
   width: 60%;
 }
+.page-title {
+  text-align: center;
+}
+.page-title h1 {
+  border: outset white;
+  background-color: #08d8dbd9;
+}
+.carousel {
+  padding-top: 1%;
+  height: 25%;
+}
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-container img:first-child {
+  opacity: 1;  
+}
+.carousel-container img:nth-child(2) {
+  left:100%
+}
+.carousel-containerimg:nth-child(3){
+  left: 100%;
+}
+
+
+
+.carousel-container img {
+
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+} 
+
+#about-page {
+  display: flex;
+  flex: 1 1 auto;
+  gap:5%;
+  background-color: #08d5d7;
+  height: 60%;
+  border-top: 3px solid black;
+}
+
+.about-content {
+  display: flex;
+  flex: 3 3 auto;
+  gap: 1.5%;
+  background-color: #08d8dbd9;
+}
+.about-content .images {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 5%;
+}
+
+.about-content .images img {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-buttons button {
+  height:100%;
+  background-color:#093f46e2;
+  border: solid;
+  border-top: none;
+}
+.about-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.about-content .content {
+  flex: 1 1 auto;
+  background-color: #08d8dbd9;
+  border: 1% black ;
+}
+
+.about-buttons .active {
+  background-color:#08d8dbd9;
+  border-right: none;
+}
+.about-content:not(.active) {
+  display: none;
+}
+
 
 footer {
   display: flex;
   padding: 1%;
   height: 3%;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-color: black;
   color: #c4f8ff;
   width: 100%;
-
 }
