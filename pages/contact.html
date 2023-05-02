@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ballons Ltd</title>
-        <link rel="stylesheet" href="../stylesheets/style.css">
-    </head>
 
+<head>
+    <!-- Main title -->
+    <title>Ballons Ltd</title>
+    <!-- Load page style -->
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
 
-    <body>
+<body>
+    <!-- Header of the page -->
+    <div class="header">
+        <!-- Website title -->
+        <h1 id="headerTitle">Explopring Kazakstan</h1>
 
+        <!-- Main navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./attractions.html">Attractions</a></li>
+                <li><a href="./accommodation.html">Accommodation</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
-        <div class="header">
-            <h1 id="headerTitle">Explopring Kazakstan</h1>
-            <nav> 
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./attractions.html">Attractions</a></li>
-                    <li><a href="./accommodation.html">Accommodation</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Main content -->
+    <div id="contactflex">
+        <!-- Contact us logo -->
+        <div class="content">
+            <h3>Contact Us:</h3>
+            <img src="../images/help.png">
         </div>
 
-    <div id="contactflex">
-    <div class="content">
-    <h3>Contact Us:</h3>
-    <img src="../images/help.png" >
+        <!-- Contact us general info -->
+        <div id="contactsummary">
+        </div>
+
+        <!-- Contact us form -->
+        <div class="form">
+            <form action="">
+                <!-- Contact name -->
+                <label for="name" type="text" name="name">Name:</label>
+                <input id="name" type="text" name="name">
+
+                <!-- Contact telephone number -->
+                <label for="number" type="text" name="number">Phone Number</label>
+                <input type="text" id="number" name="number">
+
+                <!-- Contact email -->
+                <label for="email" type="text" name="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br>
+
+                <!-- Contact message -->
+                <label for="Message" type="text" name="message">Message:</label>
+                <input type="text" id="message" name="message">
+
+                <!-- Submit button -->
+                <input type="button" id="submit" value="Submit">
+            </form>
+        </div>
     </div>
-    <div id="contactsummary">
-        <p>efhegyfgyegfygeyfyeufeugfugugefu</p>
-    </div>
 
-    <div class="form">
-        <form action="">
-            <label for="name" type="text" name="name">Name:</label>
-            <input id="name" type="text" name="name">
-
-            <label for="number" type="text" name="number">Phone Number</label>
-            <input type="text" id="number" name="number">
-
-            <label for="email" type="text" name="email">Email:</label>
-            <input type="text" id="email" name="email">
-            <br> 
-
-            <label for="Message" type="text" name="message">Message:</label>
-            <input type="text" id="message" name="message">
-
-            <input type="button" id="submit" value="Submit">
-        </form>
-    </div>
-</div>
-
+    <!-- Page footer -->
     <footer>
         <p>2023 Ballons Ltd.</p>
     </footer>
-    
-    </body>
+</body>
 </html>

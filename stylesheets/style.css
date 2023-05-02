@@ -1,3 +1,4 @@
+/* set global style for website */
 body {
   background-color: #093f46;
   color: white;
@@ -5,6 +6,7 @@ body {
   height:100vw;
 }
 
+/* style page heading and navbar */
 .header {
   color: white;
   text-align: center;
@@ -19,6 +21,7 @@ body {
   margin-top: 1%;
 }
 
+/* style navigation bar used on all pages */
 nav {
   overflow: hidden;
   justify-content: space-between;
@@ -59,25 +62,19 @@ nav li a {
   font-size: x-large;
 }
 
+/* style what happens when a mouse is over a navbar button */
 nav li a:hover {
   background-color: #d6e2dd;
   color: black;
 }
 
-label,
-input,
-textarea {
-  display: block;
-  width: 20%;
-  box-sizing: border-box;
-}
 
-.content,
-img {
+.content, img {
   width: 30%;
   height: 65%;
 }
 
+/* genereic style for content on all pages */
 .content {
   font-size: 110%;
   margin-top: 2%;
@@ -89,10 +86,12 @@ img {
   width: 100%;
   height: auto;
 }
+/* style content on home page */
 #home-content {
   margin-bottom: 6%;
 }
 
+/* style customer info form */
 .form {
   margin-top: 2%;
   margin-bottom: 1%;
@@ -117,6 +116,15 @@ img {
 textarea {
   width: 60%;
 }
+
+
+label, input, textarea {
+  display: block;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+/* style title of page */
 .page-title {
   text-align: center;
 }
@@ -124,43 +132,46 @@ textarea {
   border: outset white;
   background-color: #08d8dbd9;
 }
+/* style sliding gallery of photos */
 .carousel {
   padding-top: 1%;
   height: 25%;
+  width: 100%;
 }
 .carousel-container {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
 }
 
 .carousel-container img {
-  width: 100%;
+  width: 25%;
   height: 100%;
   position: absolute;
   top: 0;
   opacity: 0;
+  margin-left: 0;
   transition: opacity 1s ease-in-out;
+  animation: slide 40s infinite;
 }
 
 .carousel-container img:first-child {
   opacity: 1;  
 }
 .carousel-container img:nth-child(2) {
-  left:100%
-}
-.carousel-containerimg:nth-child(3){
   left: 100%;
 }
 
-
-
-.carousel-container img {
-
-  animation: slide 10s infinite;
+.carousel-container img:nth-child(3) {
+  left: 200%;
 }
 
+.carousel-container img:nth-child(4) {
+  left: 300%;
+}
+
+/* Define the CSS animation for the sliding effect */
 @keyframes slide {
   0% {
     opacity: 0;
@@ -176,8 +187,9 @@ textarea {
     opacity: 0;
     transform: translateX(-100%);
   }
-} 
+}
 
+/* style section with id "about page" */
 #about-page {
   display: flex;
   flex: 1 1 auto;
@@ -187,25 +199,28 @@ textarea {
   border-top: 3px solid black;
 }
 
+/* style elements in the div class "about-content" */
 .about-content {
   display: flex;
   flex: 3 3 auto;
   gap: 1.5%;
   background-color: #08d8dbd9;
 }
+/* style images section of the about page */
 .about-content .images {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
   gap: 5%;
 }
-
+/* style each image in the about page */
 .about-content .images img {
   flex: 1 1 auto;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .about-buttons button {
   height:100%;
   background-color:#093f46e2;
@@ -229,8 +244,7 @@ textarea {
 .about-content:not(.active) {
   display: none;
 }
-
-
+/* style info-bar at bottom of page*/
 footer {
   display: flex;
   padding: 1%;
