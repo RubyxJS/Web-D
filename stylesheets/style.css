@@ -141,53 +141,33 @@ label, input, textarea {
 .carousel-container {
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
 }
 
 .carousel-container img {
-  width: 25%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   opacity: 0;
-  margin-left: 0;
-  transition: opacity 1s ease-in-out;
-  animation: slide 40s infinite;
-}
+   animation: fade 8s  ease-in-out reverse; 
 
-.carousel-container img:first-child {
-  opacity: 1;  
 }
-.carousel-container img:nth-child(2) {
-  left: 100%;
-}
-
-.carousel-container img:nth-child(3) {
-  left: 200%;
-}
-
-.carousel-container img:nth-child(4) {
-  left: 300%;
+.carousel-container .active {
+  animation:fade 8s  ease-in-out ;
+  position: absolute;
 }
 
 /* Define the CSS animation for the sliding effect */
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
+@keyframes fade {
+from {
+opacity: 0;
+} to {
+opacity: 1;
 }
+}
+
 
 /* style section with id "about page" */
 #about-page {
