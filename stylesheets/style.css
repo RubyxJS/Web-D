@@ -151,21 +151,31 @@ label, input, textarea {
   position: absolute;
   top: 0;
   opacity: 0;
-   animation: fade 8s  ease-in-out reverse; 
 
 }
+.carousel-container .in-active {
+  animation: fade-out 6s ; 
+}
 .carousel-container .active {
-  animation:fade 8s  ease-in-out ;
+  animation:fade-in 7s ;
   position: absolute;
 }
 
 /* Define the CSS animation for the sliding effect */
-@keyframes fade {
+@keyframes fade-in {
 from {
 opacity: 0;
 } to {
 opacity: 1;
 }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
 }
 
 
