@@ -28,7 +28,6 @@
         index = nextIndex();
 
 
-        console.log("Currently active", images[index]);
     }, 6000);
 
 })();

@@ -20,6 +20,53 @@ body {
 #headerTitle {
   margin-top: 1%;
 }
+.display-cart {
+  display: flex;
+}
+.display-cart aside{
+  display: flex;
+  opacity: 0;
+  position: fixed;
+  flex: 1;
+  top: 8%;
+  right: 1%;
+  background-color: aliceblue;
+  border: solid red;
+}
+.cart-content-on{
+  display: flex;
+  position: fixed;
+  opacity: 1;
+  flex: 1;
+  top: 8%;
+  right: 1%;
+  background-color: aliceblue;
+  border: solid red;
+}
+#toggle-cart {
+width: 100%;
+height: 100%;
+opacity: 1;
+position: absolute;
+border: 5px outset white;
+}
+#toggle-cart:hover {
+opacity: 1;
+content: url(../images/carthover.png);
+}
+.cart {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  transform: translate(0, -50%);
+  width: 4%;
+  height: 4%;
+}
+#cart-hover {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
 
 /* style navigation bar used on all pages */
 nav {
@@ -123,6 +170,8 @@ label, input, textarea {
   width: 20%;
   box-sizing: border-box;
 }
+
+
 
 /* style title of page */
 .page-title {
@@ -234,6 +283,8 @@ opacity: 1;
 .about-content:not(.active) {
   display: none;
 }
+
+
 /* style info-bar at bottom of page*/
 footer {
   display: flex;
